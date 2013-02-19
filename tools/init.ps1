@@ -27,4 +27,6 @@ function global:Update-SolutionScripts()
 	}
 }
 
-Update-SolutionScripts
+# $null is workaround for NuGet echoing function output to command prompt
+# http://nuget.codeplex.com/workitem/1068
+Update-SolutionScripts > $null
