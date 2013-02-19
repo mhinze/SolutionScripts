@@ -1,7 +1,7 @@
 param($installPath, $toolsPath, $package, $project)
 
-$parentFolder = resolve-path "$package\..";
-$global:solutionScriptsContainer = Join-Path $parentFolder "SolutionScripts"
+$parentFolder = resolve-path "$package\.."
+$global:solutionScriptsContainer = Join-Path $parentFolder 'SolutionScripts'
 
 function global:Update-SolutionScripts()
 {		
@@ -14,12 +14,12 @@ function global:Update-SolutionScripts()
 
 	foreach ($file in $files)
 	{	
-		if ($file.extension -eq ".ps1") 
+		if ($file.extension -eq '.ps1') 
 		{
 			Write-Host "        Sourcing: $file"			
 			. $file.fullname
 		}
-		if ($file.extension -eq ".psm1")
+		if ($file.extension -eq '.psm1')
 		{
 			Write-Host "Importing Module: $file"
 			Import-Module $file.fullname -Force
