@@ -24,7 +24,7 @@ SolutionScripts looks for (or creates) a directory called `SolutionScripts` at t
 
 It looks in that directory for ps1 files. If any exist, it [dot sources](http://technet.microsoft.com/en-us/library/ee176949.aspx#ECAA) them. 
 
-It also looks for psm1 files (modules). If any exist, init will [import](http://technet.microsoft.com/en-us/library/dd819454.aspx) them. 
+It also looks for psm1 files (modules). If any exist, init will [import](http://technet.microsoft.com/en-us/library/dd819454.aspx) them. (this is prefered way over ps1 files - [example](http://stackoverflow.com/a/6040725))
 
 What else?---
 
